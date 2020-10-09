@@ -1,12 +1,21 @@
 <template>
-  <div>
-    <button
-      @click="getMsg"
+  <v-container fluid fill-height>
+    <v-row
+      class="text-center"
     >
-      Hello
-    </button>
-    {{ msg }}
-  </div>
+      <v-col cols="12">
+        {{ msg }}
+      </v-col>
+      <v-col cols="12">
+        <v-btn
+          color="primary"
+          @click="getMsg"
+        >
+          Click Me!!!!
+        </v-btn>
+      </v-col>
+    </v-row>
+  </v-container>
 </template>
 
 <script>
