@@ -14,6 +14,16 @@
           Click Me!!!!
         </v-btn>
       </v-col>
+      <v-col cols="12">
+        <v-row justify="space-around">
+          <v-icon>fas fa-lock</v-icon>
+          <v-icon>fas fa-search</v-icon>
+          <v-icon>fas fa-list</v-icon>
+          <v-icon>fas fa-edit</v-icon>
+          <v-icon>fas fa-tachometer-alt</v-icon>
+          <v-icon>fas fa-circle-notch fa-spin</v-icon>
+        </v-row>
+      </v-col>
     </v-row>
   </v-container>
 </template>
