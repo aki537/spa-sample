@@ -51,9 +51,9 @@ const config = {
   }
 }
 
-//開発環境の場合railsとnuxtのURLが違うのでこの設定が必要
+// 開発環境の場合railsとnuxtのURLが違うのでこの設定が必要
 if (process.env.NODE_ENV === 'development') {
-  config.proxy = { '/api': 'http://localhost:3000'}
+  config.proxy = { '/api': 'http://localhost:3000' }
 }
 
 export default config
