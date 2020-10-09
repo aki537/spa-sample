@@ -1,4 +1,4 @@
-export default {
+const config = {
   // Disable server-side rendering (https://go.nuxtjs.dev/ssr-mode)
   ssr: false,
 
@@ -36,6 +36,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios'
+    '@nuxtjs/proxy'
   ],
 
   // Axios module configuration (https://go.nuxtjs.dev/config-axios)
@@ -49,3 +50,10 @@ export default {
     dir: '../public'
   }
 }
+
+//開発環境の場合railsとnuxtのURLが違うのでこの設定が必要
+if (process.env.NODE_ENV === 'development') {
+  config.proxy = { '/api': 'http://localhost:3000'}
+}
+
+export default config
